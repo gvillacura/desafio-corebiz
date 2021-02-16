@@ -17,7 +17,7 @@ const Header = () => {
         <div>
           <img src={shoppingCart} alt="cart" />
         </div>
-        '<p>1</p>
+        <p>1</p>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@
     height: 42px;
     justify-content: center;
     max-width: 100%;
+    padding: 1%;
 }
 
 .header-container>input{
