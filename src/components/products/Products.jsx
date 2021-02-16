@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./products.css";
+import ProductContext from "../context/ProductsContext";
 
 const Products = () => {
   const [productsData, setproductsData] = useState([]);
+  const { dataProductsCart, setDataProductsCart } = useContext(ProductContext);
 
   const settings = {
     infinite: true,
@@ -30,6 +32,16 @@ const Products = () => {
     setproductsData(dataJson);
   };
 
+  const saveProduct = (item) => {
+    console.log(dataProductsCart);
+    dataProductsCart.push(item);
+    setDataProductsCart(dataProductsCart);
+  };
+
+  // const productsCart = dataProducstCart.map((item) => {
+  //   return <p key={item}>{item}</p>;
+  // });
+
   const allProducts = productsData.map((item) => {
     return (
       <div key={item.id}>
@@ -43,7 +55,13 @@ const Products = () => {
             <p>por R$</p>
             <p>{item.price}</p>
           </div>
-          <button>COMPRAR</button>
+          <button
+            onClick={() => {
+              saveProduct(item.product);
+            }}
+          >
+            COMPRAR
+          </button>
         </div>
       </div>
     );

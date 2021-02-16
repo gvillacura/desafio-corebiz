@@ -36,3 +36,7 @@
     width: 21px;
     height: 21px;
 }
+
+.hide{
+    display: none !important;
+}
