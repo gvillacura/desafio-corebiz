@@ -1,0 +1,44 @@
+.footer-container{
+    display: flex;
+    color: white;
+    font-size: 14px;
+    background-color: black;
+    justify-content: space-evenly;
+    max-width: 100%;
+}
+
+.footer-container>:nth-child(1)>hr{
+    width: 52px;
+    margin: 0;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-container>div{
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    color: black;
+    margin: 5% 0;
+    width: 180px;
+    height: 45px;
+}
+
+.contact-container>div>img{
+    height: 15px;
+    width: 15px;
+    margin: 0 4%;
+}
+
+.contact-container>div>p, .contact-container>div>div>p{
+    margin: 2% 0;
+}
+
+.created-powered-container>div>p{
+    font-size: 10px;
+}
